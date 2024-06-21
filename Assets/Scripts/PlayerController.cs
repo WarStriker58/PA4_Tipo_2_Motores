@@ -22,12 +22,12 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector3(velocity.x, rb.velocity.y, velocity.z);
     }
 
-    public void Move(InputAction.CallbackContext context)
+    public void OnMovement(InputAction.CallbackContext context)
     {
         movementInput = context.ReadValue<Vector2>();
     }
 
-    public void Jump(InputAction.CallbackContext context)
+    public void OnJump(InputAction.CallbackContext context)
     {
         if (context.performed && isGrounded)
         {
